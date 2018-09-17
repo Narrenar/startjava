@@ -15,7 +15,7 @@ public class Calculator {
 		} else if (mathSign == "^") {
 			int firstNumberInitialCopy = firstNumber;
 			for (int i = secondNumber; i >= 2; i--) {
-				firstNumber = firstNumber * firstNumberInitialCopy;
+				firstNumber *= firstNumberInitialCopy;
 			}
 			System.out.println(firstNumber);
 		} else if (mathSign == "%") {
