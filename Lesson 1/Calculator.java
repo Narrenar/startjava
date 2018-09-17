@@ -20,7 +20,7 @@ public class Calculator {
 		} else if (usersMathAction == "%") {
 			System.out.println(firstNumber % secondNumber);
 		} else {
-			System.out.println("Wrong value. The Calculator accepts only this symbols: +, -, *, /, ^, %, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9");
+			System.out.println("Wrong value. The Calculator accepts only these symbols: +, -, *, /, ^, %, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9");
 		}
 	}
 }
