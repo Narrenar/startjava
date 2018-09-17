@@ -1,21 +1,22 @@
 public class MyFirstGame {
 	public static void main(String[] args) {
 		int hiddenNumber = 42;
-		int usersChoise = -1;
+		int usersGuess = 100;
 
 		do {
-			usersChoise += 1;
-
-			if (usersChoise > hiddenNumber) {
+			if (usersGuess > hiddenNumber) {
 				System.out.println("Введенное вами число больше того, что загадал компьютер");
-			} else if (usersChoise < hiddenNumber) {
+				usersGuess -= 1;
+			} else if (usersGuess < hiddenNumber) {
 				System.out.println("Введенное вами число меньше того, что загадал компьютер");
-			} else if (usersChoise == hiddenNumber) {
-				System.out.println("Вы угадали!" + hiddenNumber);
+				usersGuess += 1;
+			} else if (usersGuess == hiddenNumber) {
+				System.out.println("Вы угадали!");
 			} else {
-				System.out.println("You have chosen the wrong value!");
+				System.out.println("You have chosen the wrong value (like #)! You can use only Figures and Numbers with these symbols: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9");
 			}
 		} 
-		while (usersChoise != hiddenNumber);
+		while (usersGuess != hiddenNumber);
+		System.out.println("Загаданное число: " + 42);
 	}
 }

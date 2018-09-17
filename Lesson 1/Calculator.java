@@ -1,30 +1,26 @@
 public class Calculator {
 	public static void main(String[] args) {
-		double firstNumber = 42;
-		double secondNumber = 1;
-		double result = 0;
-		String usersChoise = "^";
+		int firstNumber = 42;
+		int secondNumber = 3;
+		String usersMathAction = "^";
 
-		if (usersChoise == "+") {
-			result = firstNumber + secondNumber;
-			System.out.println(result);
-		} else if (usersChoise == "-"){
-			result = firstNumber - secondNumber;
-			System.out.println(result);
-		} else if (usersChoise == "*"){
-			result = firstNumber * secondNumber;
-			System.out.println(result);
-		} else if (usersChoise == "/"){
-			result = firstNumber / secondNumber;
-			System.out.println(result);
-		} else if (usersChoise == "^"){
-			result = java.lang.Math.pow(firstNumber, secondNumber);
-			System.out.println(result);
-		} else if (usersChoise == "%"){
-			result = firstNumber % secondNumber;
-			System.out.println(result);
+		if (usersMathAction == "+") {
+			System.out.println(firstNumber + secondNumber);
+		} else if (usersMathAction == "-") {
+			System.out.println(firstNumber - secondNumber);
+		} else if (usersMathAction == "*") {
+			System.out.println(firstNumber * secondNumber);
+		} else if (usersMathAction == "/") {
+			System.out.println(firstNumber / secondNumber);
+		} else if (usersMathAction == "^") {
+			for (int i = secondNumber; i >= 1; i--) {
+				firstNumber = firstNumber * firstNumber;
+			}
+			System.out.println(firstNumber);
+		} else if (usersMathAction == "%") {
+			System.out.println(firstNumber % secondNumber);
 		} else {
-			System.out.println("Wrong value");
+			System.out.println("Wrong value. The Calculator accepts only this symbols: +, -, *, /, ^, %, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9");
 		}
 	}
 }

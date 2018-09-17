@@ -5,8 +5,8 @@ public class Unicode {
 			System.out.println(i);
 		}
 		// Второй вариант выполнения задания
-		for(char i2 = 33; i2 <= 126; i2++) {
-			System.out.println(i2);
+		for(char j = 33; j <= 126; j++) {
+			System.out.println(j);
 		}
 	}
 }
