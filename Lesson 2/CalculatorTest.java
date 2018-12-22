@@ -5,9 +5,9 @@ public class CalculatorTest {
 	public static void main(String[] args) {
 		Calculator calculator1 = new Calculator();
 		Scanner scan = new Scanner(System.in);
-		Boolean startCalculator = true;
+		boolean startCalculator = true;
 	
-		while (startCalculator == true) {
+		while (startCalculator) {
 			System.out.println("Choose the FIRST number:");	 
 			calculator1.number1 = scan.nextFloat();
 			System.out.println("Choose the math OPERATION:");
@@ -15,7 +15,7 @@ public class CalculatorTest {
 			System.out.println("Choose the SECOND number:");
 			calculator1.number2 = scan.nextFloat();
 			
-			System.out.println("Answer: " + calculator1.calculating());
+			System.out.println("Answer: " + calculator1.calculate());
 
 			char startAgain;
 			do {

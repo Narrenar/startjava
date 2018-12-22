@@ -2,17 +2,22 @@ import java.util.Scanner;
 
 public class GuessNumber {
 
-	public Scanner scan = new Scanner(System.in);
-	public Player player1 = new Player();
-	public Player player2 = new Player();
+	Scanner scan = new Scanner(System.in);
+	private Player player1 = new Player();
+	private Player player2 = new Player();
 	int hiddenNumber;
+
+	public GuessNumber(String player1Name, String player2Name) {
+		player1.name = player1Name;
+		player2.name = player2Name;
+	}
 
 	public void game() {
 		System.out.println("A new game has STARTED! \n");
 
-		System.out.println("Fill in the FIRST'S PLAYER name:");
+		System.out.println("Choose NAME for the " + player1.name + ":");
 		player1.name = scan.next();
-		System.out.println("Fill in the SECOND'S PLAYER name:");
+		System.out.println("Choose NAME for the " + player2.name + ":");
 		player2.name = scan.next();
 
 		hiddenNumber = (int)(Math.random()*100);
