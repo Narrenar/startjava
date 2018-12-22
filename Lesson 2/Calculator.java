@@ -1,27 +1,32 @@
 public class Calculator {
 
-public int number1, number2;
+public float number1, number2;
 public char mathSign; 
 
-	public int mathSignCheck(int result) {
+	public float calculating() {
 		switch(mathSign) {
 		case '+': 
-			return result = number1 + number2;
+			return number1 + number2;
 		case '-': 
-			return result = number1 - number2;
+			return number1 - number2;
 		case '*': 
-			return result = number1 * number2;
+			return number1 * number2;
 		case '/': 
-			return result = number1 / number2;
+			return number1 / number2;
 		case '^': 
-			int number1InitialCopy = number1;
-			for (int i = number2; i >= 2; i--) {
-				number1 *= number1InitialCopy;
+			if (number2 != 0) {
+				float number1InitialCopy = number1;
+				for (float i = number2; i >= 2; i--) {
+					number1 *= number1InitialCopy;
+				}
+			return number1;
+			} else {
+			return 1;
 			}
-			return result = number1;
 		case '%': 
-			return result = number1 % number2;
+			return number1 % number2;
 		}
 		return 0;
-	}
+	} 
 }
+ 
