@@ -4,13 +4,38 @@ public class GuessNumberTest {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+		System.out.println("ENTER the First's player name:");
+		Player player1 = new Player(scan.next(), 0);
+		System.out.println("ENTER the Seconds's player name:");
+		Player player2 = new Player(scan.next(), 0);
+		GuessNumber game = new GuessNumber(player1.getName(), player1.getNumber(), player2.getName(), player2.getNumber());
 
-		System.out.println("Choose NAME for the FIRST player:");
-		String player1Name = scan.next();
-		System.out.println("Choose NAME for the SECOND player:");
-		String player2Name = scan.next();
-		Player player1 = new Player(player1Name, -1);
-		Player player2 = new Player(player2Name, -1);
+		boolean programWork = true;
+		while(programWork) {
+			game.gameProces();
+
+			char startAgain;
+			do {
+				System.out.println("Do you want to continue? [y/n]: ");
+				startAgain = scan.next().charAt(0);	
+				if (startAgain == 'y') {
+					System.out.println("You've desided to continue playing. \n___________");
+					continue;
+				} else if(startAgain == 'n') {
+					System.out.println("You've desided to stop playing.");
+					programWork = false;
+				} else {
+					System.out.println("WRONG VALUE. Try again:");
+				}
+			} while (startAgain != 'y' && startAgain != 'n');
+		}	
+	}
+}	
+
+		/*Scanner scan = new Scanner(System.in);
+
+		Player player1 = new Player(scan.next(), -1);
+		Player player2 = new Player(scan.next(), -1);
 		GuessNumber game = new GuessNumber((int)(Math.random()*100), true, "EMPTY NAME", 0);
 
 		boolean programWork = true;
@@ -45,8 +70,12 @@ public class GuessNumberTest {
 
 			game.setHiddenNumber((int)(Math.random()*100));
 			game.setStartGame(true);
-		}	
-	}
-}	
+		}*/
+
+
+		/*System.out.println("Choose NAME for the FIRST player:");
+		String player1Name = scan.next();
+		System.out.println("Choose NAME for the SECOND player:");
+		String player2Name = scan.next();*/
 
 /*GuessNumber game = new GuessNumber(player1.getName(), player1.getNumber(), player2.getName(), player2.getNumber());*/
